@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tistory.jaimemin.multidatasourcemybatis.multitenancy.mapper.DataSourceMapper">
+
+    <select id="getAllDataSources" resultType="dataSourceDto">
+        SELECT
+            TENANT_ID,
+            DRIVER_CLASS_NAME,
+            URL,
+            USERNAME,
+            PASSWORD,
+            IS_DEFAULT
+        FROM DATA_SOURCE_CONFIG
+    </select>
+
+    <select id="findByTenantId" resultType="dataSourceDto">
+        SELECT
+            TENANT_ID,
+            DRIVER_CLASS_NAME,
+            URL,
+            USERNAME,
+            PASSWORD,
+            IS_DEFAULT
+        FROM
+            DATA_SOURCE_CONFIG
+        WHERE
+            IS_DEFAULT = 'N'
+        AND
+            TENANT_ID = #{tenantId}
+    </select>
+
+    <insert id="save" parameterType="dataSourceSaveDto">
+        INSERT INTO DATA_SOURCE_CONFIG
+        (
+            TENANT_ID,
+            DRIVER_CLASS_NAME,
+            URL,
+            USERNAME,
+            PASSWORD
+        ) VALUES
+        (
+            #{tenantId},
+            #{driverClassName},
+            #{url},
+            #{username},
+            #{password}
+        )
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM
+            DATA_SOURCE_CONFIG
+        WHERE
+            TENANT_ID = #{tenantId}
+    </delete>
+
+</mapper>

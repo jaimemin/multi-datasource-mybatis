@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tistory.jaimemin.multidatasourcemybatis.product.mapper.ProductMapper">
+
+    <select id="getAllProducts" resultType="productDto">
+        SELECT
+            ID,
+            PRODUCT_NAME,
+            QUANTITY,
+            CREATED_BY
+        FROM
+            TBL_PRODUCT
+    </select>
+
+    <insert id="save" parameterType="productDto">
+        INSERT INTO TBL_PRODUCT
+        (
+            PRODUCT_NAME,
+            QUANTITY,
+            CREATED_BY
+        ) VALUES
+        (
+            #{productName},
+            #{quantity},
+            #{createdBy}
+        )
+    </insert>
+
+    <delete id="delete">
+        DELETE FROM
+            TBL_PRODUCT
+        WHERE
+            ID = #{id}
+    </delete>
+
+</mapper>

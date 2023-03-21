@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <setting name="cacheEnabled" value="true"/>
+        <setting name="lazyLoadingEnabled" value="false"/>
+        <setting name="defaultExecutorType" value="SIMPLE"/>
+        <setting name="defaultStatementTimeout" value="25000"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="jdbcTypeForNull" value="NULL"/>
+    </settings>
+
+    <typeAliases>
+
+        <typeAlias type="com.tistory.jaimemin.multidatasourcemybatis.multitenancy.dto.DataSourceDto" alias="dataSourceDto"/>
+        <typeAlias type="com.tistory.jaimemin.multidatasourcemybatis.multitenancy.dto.DataSourceSaveDto" alias="dataSourceSaveDto"/>
+        <typeAlias type="com.tistory.jaimemin.multidatasourcemybatis.product.dto.ProductDto" alias="productDto"/>
+    </typeAliases>
+</configuration>

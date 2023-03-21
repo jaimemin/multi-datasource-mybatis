@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  datasource:
+    master:
+      url: jdbc:mariadb://localhost:3306/multi_tenant_master?characterEncoding=UTF-8&allowMultiQueries=true
+      username: root
+      password: Aiccdev1!
+      driver-class-name: org.mariadb.jdbc.Driver
+    tenant:
+      auto-ddl: true
