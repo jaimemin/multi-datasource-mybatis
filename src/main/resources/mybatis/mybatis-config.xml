@@ -17,6 +17,6 @@
 
         <typeAlias type="com.tistory.jaimemin.multidatasourcemybatis.multitenancy.dto.DataSourceDto" alias="dataSourceDto"/>
         <typeAlias type="com.tistory.jaimemin.multidatasourcemybatis.multitenancy.dto.DataSourceSaveDto" alias="dataSourceSaveDto"/>
-        <typeAlias type="com.tistory.jaimemin.multidatasourcemybatis.product.dto.ProductDto" alias="productDto"/>
+        <typeAlias type="com.tistory.jaimemin.multidatasourcemybatis.tenant.dto.ProductDto" alias="productDto"/>
     </typeAliases>
 </configuration>

@@ -1,7 +1,7 @@
-package com.tistory.jaimemin.multidatasourcemybatis.product.controller;
+package com.tistory.jaimemin.multidatasourcemybatis.tenant.controller;
 
-import com.tistory.jaimemin.multidatasourcemybatis.product.dto.ProductDto;
-import com.tistory.jaimemin.multidatasourcemybatis.product.service.ProductService;
+import com.tistory.jaimemin.multidatasourcemybatis.tenant.dto.ProductDto;
+import com.tistory.jaimemin.multidatasourcemybatis.tenant.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;

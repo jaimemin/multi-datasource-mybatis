@@ -1,7 +1,7 @@
-package com.tistory.jaimemin.multidatasourcemybatis.product.repository;
+package com.tistory.jaimemin.multidatasourcemybatis.tenant.repository;
 
-import com.tistory.jaimemin.multidatasourcemybatis.product.dto.ProductDto;
-import com.tistory.jaimemin.multidatasourcemybatis.product.mapper.ProductMapper;
+import com.tistory.jaimemin.multidatasourcemybatis.tenant.dto.ProductDto;
+import com.tistory.jaimemin.multidatasourcemybatis.tenant.mapper.ProductMapper;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;

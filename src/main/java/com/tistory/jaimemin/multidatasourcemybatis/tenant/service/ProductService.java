@@ -1,11 +1,10 @@
-package com.tistory.jaimemin.multidatasourcemybatis.product.service;
+package com.tistory.jaimemin.multidatasourcemybatis.tenant.service;
 
-import com.tistory.jaimemin.multidatasourcemybatis.product.dto.ProductDto;
-import com.tistory.jaimemin.multidatasourcemybatis.product.repository.ProductRepository;
+import com.tistory.jaimemin.multidatasourcemybatis.tenant.dto.ProductDto;
+import com.tistory.jaimemin.multidatasourcemybatis.tenant.repository.ProductRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.util.ObjectUtils;
 
 import java.util.List;
 

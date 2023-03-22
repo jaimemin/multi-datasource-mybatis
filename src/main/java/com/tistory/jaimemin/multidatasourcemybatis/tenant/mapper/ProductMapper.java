@@ -1,6 +1,6 @@
-package com.tistory.jaimemin.multidatasourcemybatis.product.mapper;
+package com.tistory.jaimemin.multidatasourcemybatis.tenant.mapper;
 
-import com.tistory.jaimemin.multidatasourcemybatis.product.dto.ProductDto;
+import com.tistory.jaimemin.multidatasourcemybatis.tenant.dto.ProductDto;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

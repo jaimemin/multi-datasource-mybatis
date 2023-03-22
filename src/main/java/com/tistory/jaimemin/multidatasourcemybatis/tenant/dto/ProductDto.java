@@ -1,4 +1,4 @@
-package com.tistory.jaimemin.multidatasourcemybatis.product.dto;
+package com.tistory.jaimemin.multidatasourcemybatis.tenant.dto;
 
 import lombok.Builder;
 import lombok.Data;
