@@ -64,7 +64,6 @@ public class DataSourceService {
             throw new IllegalArgumentException("DB URL 혹은 계정 정보를 확인해주세요.");
         }
 
-        newDataSource.setDriverClassName(driveClassName);
         dbService.generate(newDataSource);
         repository.save(newDataSource);
         routingDataSource.refresh(repository);

@@ -12,11 +12,11 @@
             QUANTITY,
             CREATED_BY
         FROM
-            TBL_PRODUCT
+            PRODUCT
     </select>
 
     <insert id="save" parameterType="productDto">
-        INSERT INTO TBL_PRODUCT
+        INSERT INTO PRODUCT
         (
             PRODUCT_NAME,
             QUANTITY,
@@ -31,7 +31,7 @@
 
     <delete id="delete">
         DELETE FROM
-            TBL_PRODUCT
+            PRODUCT
         WHERE
             ID = #{id}
     </delete>
