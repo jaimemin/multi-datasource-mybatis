@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS PRODUCT;
+DROP TABLE IF EXISTS product;
 
-CREATE TABLE PRODUCT (
+CREATE TABLE product (
     id BIGINT auto_increment NOT NULL,
     product_name varchar(100) NOT NULL,
     quantity INT NOT NULL,

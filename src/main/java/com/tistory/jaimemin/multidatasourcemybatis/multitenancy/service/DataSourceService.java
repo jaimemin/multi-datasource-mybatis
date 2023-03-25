@@ -57,13 +57,13 @@ public class DataSourceService {
     }
 
     private void saveDataSource(DataSourceSaveDto newDataSource) {
-        newDataSource.setDriverClassName(newDataSource.getDriverClassName());
         newDataSource.addDefaultOption();
 
         if (isNotValid(newDataSource)) {
             throw new IllegalArgumentException("DB URL 혹은 계정 정보를 확인해주세요.");
         }
 
+        newDataSource.setDriverClassName(driveClassName);
         dbService.generate(newDataSource);
         repository.save(newDataSource);
         routingDataSource.refresh(repository);

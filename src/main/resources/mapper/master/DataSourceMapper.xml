@@ -13,7 +13,7 @@
             USERNAME,
             PASSWORD,
             IS_DEFAULT
-        FROM DATA_SOURCE_CONFIG
+        FROM data_source_config
     </select>
 
     <select id="findByTenantId" resultType="dataSourceDto">
@@ -25,7 +25,7 @@
             PASSWORD,
             IS_DEFAULT
         FROM
-            DATA_SOURCE_CONFIG
+            data_source_config
         WHERE
             IS_DEFAULT = 'N'
         AND
@@ -33,7 +33,7 @@
     </select>
 
     <insert id="save" parameterType="dataSourceSaveDto">
-        INSERT INTO DATA_SOURCE_CONFIG
+        INSERT INTO data_source_config
         (
             TENANT_ID,
             DRIVER_CLASS_NAME,
@@ -52,7 +52,7 @@
 
     <delete id="delete">
         DELETE FROM
-            DATA_SOURCE_CONFIG
+            data_source_config
         WHERE
             TENANT_ID = #{tenantId}
     </delete>
